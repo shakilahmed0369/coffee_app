@@ -56,7 +56,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       borderRadius: BorderRadius.circular(16)),
                   padding: const EdgeInsets.fromLTRB(0, 21, 0, 21),
                   backgroundColor: Color(primaryColor)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/home');
+              },
               child: const Text(
                 'Get Started',
                 style: TextStyle(
