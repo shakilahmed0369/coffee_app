@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
+import 'package:coffee_app/partials/product.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -23,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             Container(
               height: height,
               width: width,
-              color: Colors.teal,
+              color: Color(0xffF9F9F9),
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(0, 390, 0, 0),
                 child: Column(
@@ -78,7 +77,26 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       child: TabBarView(
                         controller: _tabController,
                         children: [
-                          Text('tab 1'),
+                          Container(
+                            child: GridView.count(
+                              childAspectRatio: MediaQuery.of(context)
+                                      .size
+                                      .width /
+                                  (MediaQuery.of(context).size.height / 1.2),
+                              padding: const EdgeInsets.all(20),
+                              crossAxisSpacing: 10,
+                              mainAxisSpacing: 10,
+                              crossAxisCount: 2,
+                              children: [
+                                Product(),
+                                Product(),
+                                Product(),
+                                Product(),
+                                Product(),
+                                Product(),
+                              ],
+                            ),
+                          ),
                           Text('tab 2'),
                           Text('tab 3'),
                         ],
