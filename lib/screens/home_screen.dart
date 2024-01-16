@@ -97,8 +97,46 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               ],
                             ),
                           ),
-                          Text('tab 2'),
-                          Text('tab 3'),
+                          Container(
+                            child: GridView.count(
+                              childAspectRatio: MediaQuery.of(context)
+                                      .size
+                                      .width /
+                                  (MediaQuery.of(context).size.height / 1.2),
+                              padding: const EdgeInsets.all(20),
+                              crossAxisSpacing: 10,
+                              mainAxisSpacing: 10,
+                              crossAxisCount: 2,
+                              children: [
+                                Product(),
+                                Product(),
+                                Product(),
+                                Product(),
+                                Product(),
+                                Product(),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            child: GridView.count(
+                              childAspectRatio: MediaQuery.of(context)
+                                      .size
+                                      .width /
+                                  (MediaQuery.of(context).size.height / 1.2),
+                              padding: const EdgeInsets.all(20),
+                              crossAxisSpacing: 10,
+                              mainAxisSpacing: 10,
+                              crossAxisCount: 2,
+                              children: [
+                                Product(),
+                                Product(),
+                                Product(),
+                                Product(),
+                                Product(),
+                                Product(),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     )
