@@ -39,32 +39,32 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           unselectedLabelColor:
                               const Color.fromARGB(255, 47, 47, 47),
                           indicatorSize: TabBarIndicatorSize.label,
-                          labelStyle: TextStyle(
+                          labelStyle: const TextStyle(
                               color: Colors.white,
                               fontSize: 18,
                               fontWeight: FontWeight.w600),
                           // labelPadding: EdgeInsets.zero
                           indicator: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Color(0xffC67C4E),
+                            color: const Color(0xffC67C4E),
                           ),
                           tabs: [
                             Tab(
                               child: Container(
-                                padding: EdgeInsets.fromLTRB(13, 0, 13, 0),
-                                child: Text('Cappuccino'),
+                                padding: const EdgeInsets.fromLTRB(13, 0, 13, 0),
+                                child: const Text('Cappuccino'),
                               ),
                             ),
                             Tab(
                               child: Container(
-                                padding: EdgeInsets.fromLTRB(13, 0, 13, 0),
-                                child: Text('Machiato'),
+                                padding: const EdgeInsets.fromLTRB(13, 0, 13, 0),
+                                child: const Text('Machiato'),
                               ),
                             ),
                             Tab(
                               child: Container(
-                                padding: EdgeInsets.fromLTRB(13, 0, 13, 0),
-                                child: Text('Latte'),
+                                padding: const EdgeInsets.fromLTRB(13, 0, 13, 0),
+                                child: const Text('Latte'),
                               ),
                             ),
                           ],
@@ -72,30 +72,26 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       ),
                     ),
                     Expanded(
-                      // width: width,
-                      // height: double.maxFinite,
                       child: TabBarView(
                         controller: _tabController,
                         children: [
-                          Container(
-                            child: GridView.count(
-                              childAspectRatio: MediaQuery.of(context)
-                                      .size
-                                      .width /
-                                  (MediaQuery.of(context).size.height / 1.2),
-                              padding: const EdgeInsets.all(20),
-                              crossAxisSpacing: 10,
-                              mainAxisSpacing: 10,
-                              crossAxisCount: 2,
-                              children: [
-                                Product(),
-                                Product(),
-                                Product(),
-                                Product(),
-                                Product(),
-                                Product(),
-                              ],
-                            ),
+                          GridView.count(
+                            childAspectRatio: MediaQuery.of(context)
+                                    .size
+                                    .width /
+                                (MediaQuery.of(context).size.height / 1.2),
+                            padding: const EdgeInsets.all(20),
+                            crossAxisSpacing: 10,
+                            mainAxisSpacing: 10,
+                            crossAxisCount: 2,
+                            children: [
+                              Product(),
+                              Product(),
+                              Product(),
+                              Product(),
+                              Product(),
+                              Product(),
+                            ],
                           ),
                           Container(
                             child: GridView.count(
